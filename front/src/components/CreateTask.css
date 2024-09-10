@@ -1,0 +1,21 @@
+.create-task {
+  padding: 2rem;
+}
+
+.create-task form {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-task input, .create-task select {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.create-task button {
+  padding: 0.5rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
