@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Validator;
+use Illuminate\Support\Facades\Hash;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Tymon\JWTAuth\Facades\JWTAuth;
 
@@ -14,9 +15,9 @@ class AuthController extends Controller
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required',
+            'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users',
-            'password' => 'required',
+            'password' => 'required|min:6',
         ]);
 
         if ($validator->fails()) {
@@ -26,7 +27,7 @@ class AuthController extends Controller
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => bcrypt($request->password),
+            'password' => Hash::make($request->password),
         ]);
 
         $token = JWTAuth::fromUser($user);

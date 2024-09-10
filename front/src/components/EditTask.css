@@ -1,0 +1,21 @@
+.edit-task {
+  padding: 2rem;
+}
+
+.edit-task form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-task input, .edit-task select {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.edit-task button {
+  padding: 0.5rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

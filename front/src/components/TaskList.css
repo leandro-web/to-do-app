@@ -1,0 +1,36 @@
+.task-list {
+  padding: 2rem;
+}
+
+.task-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.task-list th, .task-list td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+}
+
+.task-list th {
+  background-color: #f4f4f4;
+}
+
+.task-list button {
+  border: none;
+  background-color: #e74c3c;
+  color: white;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.task-list a {
+  border: none;
+  background-color: #3c56e7;
+  color: white;
+  padding: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.8rem;
+  margin-right: 1rem;
+}
